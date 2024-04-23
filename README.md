@@ -1,4 +1,4 @@
-```markdown
+
 # LZ77 Compression and Shannon Entropy Calculator
 
 This repository contains Python implementations of the LZ77 compression algorithm and a Shannon entropy calculator. These tools are designed to help understand and analyze the efficiency of text compression and the inherent information content in data.
@@ -19,7 +19,6 @@ Ensure you have Python installed. You can download Python from [python.org](http
 ### Installation
 
 Clone this repository to your local machine using:
-```
 
 ```bash
 gh repo clone Floressek/Theory_of_crypto_lab
