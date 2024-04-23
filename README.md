@@ -70,6 +70,3 @@ Contributions are welcome! For major changes, please open an issue first to disc
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Replace `https://your-repository-url` and `your-repository-directory` with your actual repository URL and directory name. This `README.md` provides a comprehensive guide for users to understand what the project does, how to set it up, and how to use it. Adjust the text as needed to better fit your project specifics or additional features.
