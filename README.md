@@ -50,17 +50,28 @@ python Shannon_result_table.py
 Here's how you can use the LZ77 encoding script:
 
 ```bash
-Enter the dictionary size: 6
-Enter the buffer size: 4
-Enter the text to encode: abracadabra
+Enter the dictionary size: 15
+Enter the buffer size: 5
+Enter the text to encode: BAADAADDDBEEDAAEAADAABDDA
 ```
 
 Output:
 ```
-|  | abra | bracadabra | <0, 0, a>
-| a | brac | racadabra | <0, 0, b>
-...
-Encoded LZ77: [(0, 0, 'a'), (0, 0, 'b'), ...]
+Dictionary           | Buffer               | Remaining            | Match               
+------------------------------------------------------------------------------------
+                     | BAADA                | ADDDBEEDAAEAADAABDDA | <0, 0, B>
+B                    | AADAA                | DDDBEEDAAEAADAABDDA  | <0, 0, A>
+BA                   | ADAAD                | DDBEEDAAEAADAABDDA   | <1, 1, D>
+BAAD                 | AADDD                | BEEDAAEAADAABDDA     | <3, 3, D>
+BAADAADD             | DBEED                | AAEAADAABDDA         | <5, 1, B>
+BAADAADDDB           | EEDAA                | EAADAABDDA           | <0, 0, E>
+BAADAADDDBE          | EDAAE                | AADAABDDA            | <1, 1, D>
+BAADAADDDBEED        | AAEAA                | DAABDDA              | <12, 2, E>
+AADAADDDBEEDAAE      | AADAA                | BDDA                 | <15, 5, B>
+DDBEEDAAEAADAAB      | DDA                  |                      | <15, 2, A>
+Encoded LZ77: [(0, 0, 'B'), (0, 0, 'A'), (1, 1, 'D'), (3, 3, 'D'), (5, 1, 'B'), (0, 0, 'E'), (1, 1, 'D'), (12, 2, 'E'), (15, 5, 'B'), (15, 2, 'A')]
+Amount of encoded words: 10
+
 ```
 
 ## Contributing
